@@ -1,7 +1,51 @@
+:root {
+    --text-primary: #333333;
+    --text-secondary: #fff;
+
+    --fill-primary: #f6f6f8;
+    --fill-secondary: #343740;
+    --fill-tertiary: #dbdbed;
+
+    --accent-color: #2352de;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-LightItalic.woff2") format("woff2"),
+        url("../fonts/OpenSans-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 html {
     box-sizing: border-box;
 }
-    
+
 *,
 *::before,
 *::after {
@@ -53,8 +97,110 @@ a {
     text-decoration: none;
 }
 
-
-
 body {
-    
+    font-family: "Open Sans", sans-serif;
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 140px 0;
+}
+
+.title {
+}
+
+.logo {
+    max-width: 158px;
+}
+
+.header {
+    position: relative;
+
+    color: #fff;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    background-color: var(--accent-color);
+    opacity: 0.5;
+}
+
+.header__inner {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 75px 0 30px;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 91px;
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__item {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.header__title {
+    max-width: 670px;
+    margin: auto 0;
+
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.header__title b {
+    display: block;
+
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.header__anchor {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 18px;
+}
+
+.header__anchor span {
+    margin-bottom: 10px;
 }
