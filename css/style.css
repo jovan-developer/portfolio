@@ -386,3 +386,14 @@ body {
 .services__content p:not(:last-child) {
     margin-bottom: 10px;
 }
+
+.footer {
+    padding: 50px 0;
+
+    background-color: var(--fill-secondary);
+}
+
+.footer__logo {
+    display: block;
+    margin: 0 auto;
+}
