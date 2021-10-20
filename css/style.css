@@ -347,6 +347,10 @@ body {
 .services {
 }
 
+.services__inner {
+    
+}
+
 .services__title {
     margin-bottom: 60px;
 }
